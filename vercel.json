@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "name": "blogtruyen",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_API_BASE_URL": "@vite_api_base_url",
+    "VITE_APP_NAME": "@vite_app_name",
+    "VITE_APP_VERSION": "@vite_app_version",
+    "VITE_ENABLE_DEVTOOLS": "@vite_enable_devtools",
+    "VITE_ENABLE_ANALYTICS": "@vite_enable_analytics",
+    "VITE_CDN_DOMAIN": "@vite_cdn_domain",
+    "VITE_PRIMARY_COLOR": "@vite_primary_color",
+    "VITE_ACCENT_COLOR": "@vite_accent_color"
+  },
+  "build": {
+    "env": {
+      "VITE_API_BASE_URL": "https://otruyenapi.com/v1/api",
+      "VITE_APP_NAME": "BlogTruyen",
+      "VITE_APP_VERSION": "1.0.0",
+      "VITE_ENABLE_DEVTOOLS": "false",
+      "VITE_ENABLE_ANALYTICS": "true",
+      "VITE_CDN_DOMAIN": "https://img.otruyenapi.com",
+      "VITE_PRIMARY_COLOR": "#1B6FA8",
+      "VITE_ACCENT_COLOR": "#F4B333",
+      "VITE_QUERY_STALE_TIME": "300000",
+      "VITE_QUERY_CACHE_TIME": "600000",
+      "VITE_DEFAULT_PAGE_SIZE": "20",
+      "VITE_MAX_PAGES_INFINITE_SCROLL": "3",
+      "VITE_HERO_BANNER_HEIGHT": "20",
+      "VITE_MANGA_GRID_MOBILE": "2",
+      "VITE_MANGA_GRID_TABLET": "4",
+      "VITE_MANGA_GRID_DESKTOP": "5",
+      "VITE_MIN_SEARCH_LENGTH": "3",
+      "VITE_SEARCH_DEBOUNCE_MS": "500"
+    }
+  },
+  "functions": {
+    "app/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
