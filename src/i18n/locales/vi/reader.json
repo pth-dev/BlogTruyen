@@ -1,0 +1,48 @@
+{
+  "title": "Đọc truyện",
+  "navigation": {
+    "previousChapter": "Chương trước",
+    "nextChapter": "Chương sau",
+    "chapterList": "Danh sách chương",
+    "goToPage": "Đến trang",
+    "pageOf": "Trang {{current}} / {{total}}"
+  },
+  "settings": {
+    "title": "Cài đặt đọc",
+    "readingMode": "Chế độ đọc",
+    "readingDirection": "Hướng đọc",
+    "pageFit": "Khớp trang",
+    "brightness": "Độ sáng",
+    "backgroundColor": "Màu nền"
+  },
+  "modes": {
+    "single": "Một trang",
+    "double": "Hai trang",
+    "webtoon": "Webtoon"
+  },
+  "directions": {
+    "ltr": "Trái sang phải",
+    "rtl": "Phải sang trái"
+  },
+  "pageFit": {
+    "width": "Khớp chiều rộng",
+    "height": "Khớp chiều cao",
+    "auto": "Tự động"
+  },
+  "controls": {
+    "fullscreen": "Toàn màn hình",
+    "exitFullscreen": "Thoát toàn màn hình",
+    "settings": "Cài đặt",
+    "bookmark": "Đánh dấu",
+    "share": "Chia sẻ"
+  },
+  "shortcuts": {
+    "title": "Phím tắt",
+    "nextPage": "Trang sau",
+    "previousPage": "Trang trước",
+    "firstPage": "Trang đầu",
+    "lastPage": "Trang cuối",
+    "toggleFullscreen": "Bật/tắt toàn màn hình",
+    "toggleSettings": "Bật/tắt cài đặt"
+  }
+}

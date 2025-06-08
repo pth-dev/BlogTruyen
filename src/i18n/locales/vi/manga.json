@@ -1,0 +1,53 @@
+{
+  "title": "Truyện tranh",
+  "details": {
+    "author": "Tác giả",
+    "artist": "Họa sĩ",
+    "status": "Trạng thái",
+    "genres": "Thể loại",
+    "rating": "Đánh giá",
+    "chapters": "Chương",
+    "views": "Lượt xem",
+    "description": "Mô tả",
+    "alternativeTitle": "Tên khác"
+  },
+  "status": {
+    "ongoing": "Đang tiến hành",
+    "completed": "Hoàn thành",
+    "hiatus": "Tạm dừng",
+    "cancelled": "Đã hủy"
+  },
+  "actions": {
+    "readNow": "Đọc ngay",
+    "addBookmark": "Thêm vào đánh dấu",
+    "removeBookmark": "Xóa khỏi đánh dấu",
+    "continueReading": "Tiếp tục đọc",
+    "startReading": "Bắt đầu đọc",
+    "rate": "Đánh giá truyện này",
+    "comment": "Để lại bình luận"
+  },
+  "search": {
+    "placeholder": "Tìm kiếm truyện...",
+    "noResults": "Không tìm thấy truyện nào",
+    "filters": {
+      "all": "Tất cả",
+      "genre": "Thể loại",
+      "status": "Trạng thái",
+      "sortBy": "Sắp xếp theo",
+      "sortOrder": "Thứ tự"
+    },
+    "sortOptions": {
+      "title": "Tiêu đề",
+      "rating": "Đánh giá",
+      "views": "Lượt xem",
+      "updated": "Cập nhật gần nhất",
+      "created": "Ngày thêm"
+    }
+  },
+  "comments": {
+    "title": "Bình luận",
+    "noComments": "Chưa có bình luận nào",
+    "writeComment": "Viết bình luận...",
+    "rating": "Đánh giá của bạn"
+  }
+}

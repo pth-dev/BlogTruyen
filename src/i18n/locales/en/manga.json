@@ -1,0 +1,53 @@
+{
+  "title": "Manga",
+  "details": {
+    "author": "Author",
+    "artist": "Artist",
+    "status": "Status",
+    "genres": "Genres",
+    "rating": "Rating",
+    "chapters": "Chapters",
+    "views": "Views",
+    "description": "Description",
+    "alternativeTitle": "Alternative Title"
+  },
+  "status": {
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "hiatus": "Hiatus",
+    "cancelled": "Cancelled"
+  },
+  "actions": {
+    "readNow": "Read Now",
+    "addBookmark": "Add to Bookmarks",
+    "removeBookmark": "Remove from Bookmarks",
+    "continueReading": "Continue Reading",
+    "startReading": "Start Reading",
+    "rate": "Rate this manga",
+    "comment": "Leave a comment"
+  },
+  "search": {
+    "placeholder": "Search manga...",
+    "noResults": "No manga found",
+    "filters": {
+      "all": "All",
+      "genre": "Genre",
+      "status": "Status",
+      "sortBy": "Sort by",
+      "sortOrder": "Order"
+    },
+    "sortOptions": {
+      "title": "Title",
+      "rating": "Rating",
+      "views": "Views",
+      "updated": "Last Updated",
+      "created": "Date Added"
+    }
+  },
+  "comments": {
+    "title": "Comments",
+    "noComments": "No comments yet",
+    "writeComment": "Write a comment...",
+    "rating": "Your rating"
+  }
+}

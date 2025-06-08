@@ -1,0 +1,48 @@
+{
+  "title": "Reader",
+  "navigation": {
+    "previousChapter": "Previous Chapter",
+    "nextChapter": "Next Chapter",
+    "chapterList": "Chapter List",
+    "goToPage": "Go to page",
+    "pageOf": "Page {{current}} of {{total}}"
+  },
+  "settings": {
+    "title": "Reading Settings",
+    "readingMode": "Reading Mode",
+    "readingDirection": "Reading Direction",
+    "pageFit": "Page Fit",
+    "brightness": "Brightness",
+    "backgroundColor": "Background Color"
+  },
+  "modes": {
+    "single": "Single Page",
+    "double": "Double Page",
+    "webtoon": "Webtoon"
+  },
+  "directions": {
+    "ltr": "Left to Right",
+    "rtl": "Right to Left"
+  },
+  "pageFit": {
+    "width": "Fit Width",
+    "height": "Fit Height",
+    "auto": "Auto Fit"
+  },
+  "controls": {
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit Fullscreen",
+    "settings": "Settings",
+    "bookmark": "Bookmark",
+    "share": "Share"
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "nextPage": "Next Page",
+    "previousPage": "Previous Page",
+    "firstPage": "First Page",
+    "lastPage": "Last Page",
+    "toggleFullscreen": "Toggle Fullscreen",
+    "toggleSettings": "Toggle Settings"
+  }
+}
