@@ -36,29 +36,30 @@ export const useInfiniteScroll = ({
     data: pageData,
     isLoading,
     error,
-  } = useDanhSachQuery(type, currentPage, {
-    enabled: enabled && currentPage <= maxPages,
-  });
+  } = useDanhSachQuery(type, currentPage);
 
   // Transform and accumulate data
   useEffect(() => {
     if (pageData?.data && !loadingRef.current) {
       const transformedData = transformHomeDataToMangaList(pageData.data);
-      
+
       if (currentPage === 1) {
         // First page - replace all data
         setAllData(transformedData.allMangas);
-        
+
         // Calculate total pages from API response, but limit to maxPages
-        const apiTotalPages = transformedData.pagination?.totalItems 
-          ? Math.ceil(transformedData.pagination.totalItems / (transformedData.pagination.totalItemsPerPage || 24))
+        const apiTotalPages = pageData.data.params?.pagination?.totalItems
+          ? Math.ceil(
+              pageData.data.params.pagination.totalItems /
+                (pageData.data.params.pagination.totalItemsPerPage || 24)
+            )
           : maxPages;
         setTotalPages(Math.min(apiTotalPages, maxPages));
       } else {
         // Subsequent pages - append data
         setAllData((prevData) => [...prevData, ...transformedData.allMangas]);
       }
-      
+
       setIsLoadingMore(false);
       loadingRef.current = false;
     }

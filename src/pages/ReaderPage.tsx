@@ -76,9 +76,7 @@ export const ReaderPage: React.FC<ReaderPageProps> = () => {
     data: mangaData,
     isLoading: mangaLoading,
     error: mangaError,
-  } = useTruyenDetailQuery(mangaSlug || "", {
-    enabled: !!mangaSlug,
-  });
+  } = useTruyenDetailQuery(mangaSlug || "");
 
   // Extract chapter and manga info
   const chapter = chapterData?.data?.item;

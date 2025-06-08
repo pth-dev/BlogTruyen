@@ -4,6 +4,7 @@ export interface User {
   username: string;
   email: string;
   avatar?: string;
+  role?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -69,9 +70,9 @@ export interface ReadingHistory {
 
 // Reader Settings Types
 export interface ReaderSettings {
-  readingMode: 'single' | 'double' | 'continuous';
-  readingDirection: 'ltr' | 'rtl';
-  pageFit: 'width' | 'height' | 'original';
+  readingMode: "single" | "double" | "continuous";
+  readingDirection: "ltr" | "rtl";
+  pageFit: "width" | "height" | "original";
   brightness: number;
   backgroundColor: string;
 }
@@ -125,7 +126,7 @@ export interface Comment {
   dislikes: number;
   createdAt: string;
   updatedAt: string;
-  user: Pick<User, 'id' | 'username' | 'avatar'>;
+  user: Pick<User, "id" | "username" | "avatar">;
   replies?: Comment[];
 }
 
@@ -133,7 +134,7 @@ export interface Comment {
 export interface Notification {
   id: string;
   userId: string;
-  type: 'new_chapter' | 'comment_reply' | 'system' | 'update';
+  type: "new_chapter" | "comment_reply" | "system" | "update";
   title: string;
   message: string;
   isRead: boolean;
@@ -146,8 +147,8 @@ export interface SearchFilters {
   query?: string;
   genres?: string[];
   status?: string[];
-  sortBy?: 'title' | 'updated' | 'created' | 'rating' | 'views';
-  sortOrder?: 'asc' | 'desc';
+  sortBy?: "title" | "updated" | "created" | "rating" | "views";
+  sortOrder?: "asc" | "desc";
   page?: number;
   limit?: number;
 }

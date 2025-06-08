@@ -40,8 +40,7 @@ export const BrowsePage: React.FC = () => {
     error: mangaError,
   } = useDanhSachQuery(
     selectedCategory === "all" ? "truyen-moi" : selectedCategory,
-    1,
-    { enabled: true }
+    1
   );
 
   // Transform manga data

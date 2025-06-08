@@ -1,5 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from '../ui';
+import React, { Component } from "react";
+import type { ErrorInfo, ReactNode } from "react";
+import { Button } from "../ui";
 
 interface Props {
   children: ReactNode;
@@ -25,10 +26,10 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("ErrorBoundary caught an error:", error, errorInfo);
     }
-    
+
     this.setState({
       error,
       errorInfo,
@@ -70,7 +71,8 @@ export class ErrorBoundary extends Component<Props, State> {
                 Oops! Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">
-                We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.
+                We encountered an unexpected error. Please try refreshing the
+                page or contact support if the problem persists.
               </p>
             </div>
 
@@ -90,7 +92,7 @@ export class ErrorBoundary extends Component<Props, State> {
               </Button>
               <Button
                 variant="ghost"
-                onClick={() => window.location.href = '/'}
+                onClick={() => (window.location.href = "/")}
                 className="w-full"
               >
                 Go to Home
@@ -98,7 +100,7 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
 
             {/* Error details in development */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === "development" && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
                   Error Details (Development)
@@ -136,8 +138,8 @@ export class ErrorBoundary extends Component<Props, State> {
 // Hook version for functional components
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by useErrorHandler:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error caught by useErrorHandler:", error, errorInfo);
     }
     // You can also send error to logging service here
   };
@@ -154,20 +156,25 @@ export const withErrorBoundary = <P extends object>(
     </ErrorBoundary>
   );
 
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
+  WrappedComponent.displayName = `withErrorBoundary(${
+    Component.displayName || Component.name
+  })`;
+
   return WrappedComponent;
 };
 
 // Specific error boundaries for different parts of the app
-export const ReaderErrorBoundary: React.FC<{ children: ReactNode }> = ({ children }) => (
+export const ReaderErrorBoundary: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => (
   <ErrorBoundary
     fallback={
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center text-white max-w-md mx-auto p-6">
           <h1 className="text-2xl font-bold mb-4">Reader Error</h1>
           <p className="text-gray-300 mb-6">
-            Something went wrong while loading the manga reader. Please try again.
+            Something went wrong while loading the manga reader. Please try
+            again.
           </p>
           <div className="space-y-3">
             <Button
@@ -192,7 +199,9 @@ export const ReaderErrorBoundary: React.FC<{ children: ReactNode }> = ({ childre
   </ErrorBoundary>
 );
 
-export const MangaDetailErrorBoundary: React.FC<{ children: ReactNode }> = ({ children }) => (
+export const MangaDetailErrorBoundary: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => (
   <ErrorBoundary
     fallback={
       <div className="min-h-screen bg-[#1F1F1F] flex items-center justify-center">
@@ -210,7 +219,7 @@ export const MangaDetailErrorBoundary: React.FC<{ children: ReactNode }> = ({ ch
             </Button>
             <Button
               variant="outline"
-              onClick={() => window.location.href = '/'}
+              onClick={() => (window.location.href = "/")}
               className="w-full text-white border-white hover:bg-white hover:text-black"
             >
               Go to Home
